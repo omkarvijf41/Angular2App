@@ -185,3 +185,13 @@ Shut it down manually with `Ctrl-C`.
 
 [travis-badge]: https://travis-ci.org/angular/quickstart.svg?branch=master
 [travis-badge-url]: https://travis-ci.org/angular/quickstart
+
+
+
+How to setup and run your first application application?
+
+1.First install the nodeJs from https://nodejs.org/en/ (enter node -v in command prompt or gitbash to see if node version is correctly installed)
+2.Install Git Bash from https://git-scm.com/download/win (git -v gives you version of Git)
+3.Install any code editors like(sublime Text,Webstorm, Atom,intelliJ IDEA)
+4.Open the cloned or copied project root folder path in git bash or command line then enter npm install
+5. npm start will run an angular App.
