@@ -23,7 +23,7 @@ export class UserComponent {
 			state: 'CT',
 			Country: 'USA'
 		};
-		this.intrests = ['TDP', 'NBK', 'JOKING'];
+		this.intrests = ['Coding', 'Exploring', 'Playing'];
 		this.showIntrest = false;
 		this.postServices.getPostServices().subscribe(posts=> {
 			this.posts = posts

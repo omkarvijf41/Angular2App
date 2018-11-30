@@ -1,4 +1,4 @@
-<h1>Hello {{name}}. This is First Angular2 Component or Directive</h1>
+<h2>Hello {{name}}. This is First Angular2 Component or Directive</h2>
 		<p>Email:{{email}}</p>
 		<p>Address:{{address.street}}, {{address.city}}</p>
 		<!-- open paranthesis for event listeners eg:(click) and square brackets for object property names [(ngModel)]="address.street. -->
@@ -12,29 +12,35 @@
 				{{intrest}} <button (click)="deleteIntrests(i)">X</button>
 				</li>
 			</ul>
-			<form (submit)="addIntrests(intrest.value)">
+			<form (submit)="addIntrests(enteredInput.value)">
 				<span style="font-size:small">Add Intrest:</span>
-				<input type="text" #intrest/>
+				<input type="text" #enteredInput/>
 			</form>	
 		</div>
-		<h1> Adding form inputs to add and delete intrests.</h1>
+		<h2> Adding form inputs to add and delete intrests.</h2>
 		<form>
 			<!-- two way data binding.-->
+			<h3>Two way data binding occuring below:</h3>
 			<span style="font-size:small">Name:</span>
-			<input type="text" name="name" [(ngModel)]="name" /><br>
+			<input type="text" name="name" [(ngModel)]="name" />{{name}}<br/>
 			<span style="font-size:small">Email:</span>
-			<input type="text" name="email" [(ngModel)]="email" /><br>
+			<input type="text" name="email" [(ngModel)]="email" />{{email}}<br/>
 			<span style="font-size:small">Street:</span>
 			<!-- open paranthesis for event listeners eg:(click) and square brackets for object property names [(ngModel)]="address.street. -->
 			<input type="text" name="address.street" 
-			[(ngModel)]="address.street" /><br>
+			[(ngModel)]="address.street" /><br/>
 			<span style="font-size:small">City:</span>
 			<input type="text" name="address.city" 
-			[(ngModel)]="address.city" /><br>
+			[(ngModel)]="address.city" /><br/>
 		</form>	
-		<hr/>
-		<h3>Angular 2 Post Service:</h3>
-		<div *ngFor="let post of posts">
-			{{post.title}}<br/> 
-			{{post.body}} <br/>
+		<h3>Angular 2 Post Service data iterating through template:</h3>
+		<div *ngFor="let post of posts; let i = index;">
+			<ul *ngIf="i < 3">
+				<li>
+					<h3>{{post.title}}</h3>
+				</li>
+				<li>
+					<p>{{post.body}}</p>
+				</li>
+			</ul> 
 		</div>
